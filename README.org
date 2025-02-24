@@ -1,0 +1,8 @@
+* Studio Anleitungen
+
+Das ist das Repository für die Erstellungen und Pflege der Anleitungen
+für die Studios am ICEM.
+
+Derzeit arbeiten Jorge, Leon und Philipp an einer systematischen
+Erstellung von aktuellen Studioanleitungen mit Anwendungsfällen für
+die Studierenden und Lehrenden.
