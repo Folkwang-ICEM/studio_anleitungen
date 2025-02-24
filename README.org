@@ -6,3 +6,8 @@ für die Studios am ICEM.
 Derzeit arbeiten Jorge, Leon und Philipp an einer systematischen
 Erstellung von aktuellen Studioanleitungen mit Anwendungsfällen für
 die Studierenden und Lehrenden.
+
+## TODO
+- Typische Anwendungsbeispiele
+- Schickes Komponentendiagramm
+- Troubleshooting
