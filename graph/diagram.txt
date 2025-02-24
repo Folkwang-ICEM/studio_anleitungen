@@ -1,0 +1,74 @@
+@startuml
+
+skinparam linetype ortho
+'skinparam linetype polyline
+
+rectangle "AD Wandler" as ad {
+  rectangle "FOCUSRITE REDNET MP8R \n8CH MIKROFONVORVERSTÄRKER \nAD DANTE WANDLER \n<img:images/rednet-mp8r.png{scale=0.2}>" as focusrite
+  rectangle "DIRECT OUT ANDIAMO DANTE \n32CH AD/DA Wandler \n<img:images/Andiamo.png{scale=0.1}>" as andioamo_ad
+}
+
+rectangle "Interface" as interface {
+  rectangle "Dante Virtual Soundcard \n<img:images/DVS.png{scale=0.3}>" as dvs
+  rectangle "RME Digiface Dante \n<img:images/Digiface-Dante.png{scale=0.2}>" as digiface
+}
+
+rectangle "DA Wandler" as da {
+  rectangle "DIRECT OUT ANDIAMO DANTE \n32CH AD/DA Wandler \n<img:images/Andiamo.png{scale=0.1}>" as andiamo_da
+}
+	
+rectangle "Computer" as computer {
+  rectangle "eigener Rechner \n<img:images/laptop.png{scale=0.8}>" as laptop
+  rectangle "Mac Pro \n<img:images/MacPro.png{scale=0.16}>" as mac
+}
+
+rectangle  "Arbeiten ohne Dante" as ohne_dante {
+  rectangle "APOLLO INTERFACE \n<img:images/Apollo.png{scale=0.1}>" as apollo
+  rectangle "RME FIREFACE UC \nINTERFACE TISCH \n<img:images/Fireface_UC.png{scale=0.1}>" as fireface
+  rectangle "DI BOX TISCH \n<img:images/DI.png{scale=0.1}>" as di
+  rectangle "CD PLAYER TISCH \n<img:images/CD_Player.png{scale=0.3}>" as cd
+}
+
+rectangle "Mikrofron usw. \n<img:images/U87.png{scale=0.1}>" as mic
+rectangle "RME XLR BREAKOUT 1-3 \n<img:images/rme_xlr_breakout.png{scale=0.3}>" as breakout
+rectangle "NEUTRIK TT STECKFELD \n<img:images/TT_Steckfeld.png{scale=0.3}>" as steckfeld
+rectangle "AUDIO 216-16 CH \n MIKROFONVORVERSTÄRKER \n <img:images/Preamps.png{scale=0.06}>" as preamps
+rectangle "RTW TC5 \nDANTE MONITOR CONTROLLER \n<img:images/TC5.png{scale=0.3}>" as rtw
+rectangle "MACKIE 1642 VLZ4 \n<img:images/Mackie_1642vlz4.png{scale=0.1}>" as mackie
+rectangle "GENELEC 8030C (TAFEL) \n<img:images/Genelec-8030c.png{scale=0.08}>" as tafel
+rectangle "GENELEC 1038A (4-CH) \n<img:images/Genelec-1038a.png{scale=0.2}>" as quad
+rectangle "GENELEC 8040C (DOME) \n<img:images/genelec-8040.png{scale=0.17}>" as dome
+
+
+'hidden
+breakout -[hidden]r- preamps
+da -[hidden]r- ad
+
+'digital
+ad -[#blue]-> interface
+computer <-[#blue]-> interface
+interface -[#blue]-> rtw
+rtw -[#blue]-> da
+
+'analog
+mic .d.> breakout
+breakout <.d.> steckfeld
+preamps <.d.> steckfeld
+steckfeld -l-> ad
+da -d-> steckfeld
+
+'zu den Lautsprechern
+steckfeld -r-> dome
+steckfeld -r-> mackie
+mackie -r-> tafel
+mackie -r-> quad
+
+
+'ohne Dante
+ohne_dante <......> steckfeld
+mac <.d.> apollo
+laptop <.d.> fireface
+laptop <.d.> di
+laptop <.d.> cd
+
+@enduml
