@@ -171,7 +171,7 @@ WICHTIG: Obwohl das Digiface nicht als Schnittstelle zwischen dem Rechner und de
 
 *Mit Dante* TODO
 
-- Laptop anschließen (siehe [diesen Abschnitt](#mono-bis-20-1-dehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macpro))
+- Laptop anschließen (siehe [diesen Abschnitt](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macpro))
 - RME Digiface verbinden (dafür muss der RME treiber installiert sein)
 - Audio auf 1-2 schicken
 - Am Mischpult Lautstärke einstellen
