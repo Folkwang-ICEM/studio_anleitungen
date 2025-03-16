@@ -165,6 +165,44 @@ WICHTIG: Obwohl das Digiface nicht als Schnittstelle zwischen dem Rechner und de
 
 # Routings für typische Anwendungsfälle
 
+## Eigener Rechner
+
+### Eigener Rechner -> Stereo Abhöre
+
+*Mit Dante* TODO
+
+- Laptop anschließen (siehe [diesen Abschnitt](#mono-bis-20-1-dehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macpro))
+- RME Digiface verbinden (dafür muss der RME treiber installiert sein)
+- Audio auf 1-2 schicken
+- Am Mischpult Lautstärke einstellen
+
+![Diagramm Laptop -> Stereo](/graph/laptop-stereo.png)
+
+*Ohne Dante* TODO
+
+- Über USB Kabel am FIREFACE am Tisch anschließen (dafür muss der RME treiber installiert sein)
+- am Steckfeld Fireface Outs 1-2 auf ... stecken...
+
+![Diagramm Laptop -> Stereo](/graph/laptop-stereo-no-dante.png)
+
+### Eigener Rechner -> Stereo Tafel
+
+### Eigener Rechner -> Quadro Abhöre
+
+### Eigener Rechner -> DOME
+
+### Aufnahme mit dem eigenen Rechner
+
+## Studio PC
+
+### Studio PC -> Stereo Abhöre
+
+### Studio PC -> Quadro Abhöre
+
+### Studio PC -> DOME
+
+### Aufnehmen mit dem Studio PC
+
 
 # Lautsprecher Setup
 
