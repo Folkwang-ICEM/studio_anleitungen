@@ -2,73 +2,91 @@
 
 skinparam linetype ortho
 'skinparam linetype polyline
+skinparam interface {
+    BackgroundColor transparent
+    BorderColor transparent
+    shadowing false
+}
 
 rectangle "AD Wandler" as ad {
   rectangle "FOCUSRITE REDNET MP8R \n8CH MIKROFONVORVERSTÄRKER \nAD DANTE WANDLER \n<img:images/rednet-mp8r.png{scale=0.2}>" as focusrite
-  rectangle "DIRECT OUT ANDIAMO DANTE \n32CH AD/DA Wandler \n<img:images/Andiamo.png{scale=0.1}>" as andioamo_ad
+  interface " " as ad_out
+  rectangle "DIRECT OUT ANDIAMO DANTE \n32CH AD/DA Wandler \n<img:images/Andiamo.png{scale=0.2}>" as andioamo_ad
 }
 
 rectangle "Interface" as interface {
-  rectangle "Dante Virtual Soundcard \n<img:images/DVS.png{scale=0.3}>" as dvs
+  rectangle "Dante Virtual Soundcard \n<img:images/DVS.png{scale=0.2}>" as dvs
+  interface " " as interface_
   rectangle "RME Digiface Dante \n<img:images/Digiface-Dante.png{scale=0.2}>" as digiface
 }
 
 rectangle "DA Wandler" as da {
-  rectangle "DIRECT OUT ANDIAMO DANTE \n32CH AD/DA Wandler \n<img:images/Andiamo.png{scale=0.1}>" as andiamo_da
+  rectangle "DIRECT OUT ANDIAMO DANTE \n32CH AD/DA Wandler \n<img:images/Andiamo.png{scale=0.2}>" as andiamo_da
 }
 	
 rectangle "Computer" as computer {
-  rectangle "eigener Rechner \n<img:images/laptop.png{scale=0.8}>" as laptop
-  rectangle "Mac Pro \n<img:images/MacPro.png{scale=0.16}>" as mac
+  rectangle "eigener Rechner \n<img:images/laptop.png{scale=0.2}>" as laptop
+  rectangle "Mac Pro \n<img:images/MacPro.png{scale=0.2}>" as mac
 }
 
 rectangle  "Arbeiten ohne Dante" as ohne_dante {
-  rectangle "APOLLO INTERFACE \n<img:images/Apollo.png{scale=0.1}>" as apollo
-  rectangle "RME FIREFACE UC \nINTERFACE TISCH \n<img:images/Fireface_UC.png{scale=0.1}>" as fireface
-  rectangle "DI BOX TISCH \n<img:images/DI.png{scale=0.1}>" as di
-  rectangle "CD PLAYER TISCH \n<img:images/CD_Player.png{scale=0.3}>" as cd
+  rectangle "APOLLO INTERFACE \n<img:images/Apollo.png{scale=0.2}>" as apollo
+  rectangle "RME FIREFACE UC \nINTERFACE TISCH \n<img:images/Fireface_UC.png{scale=0.2}>" as fireface
+  rectangle "DI BOX TISCH \n<img:images/DI.png{scale=0.2}>" as di
+  rectangle "CD PLAYER TISCH \n<img:images/CD_Player.png{scale=0.2}>" as cd
+  interface " " as ohne_dante_out
 }
 
-rectangle "Mikrofron usw. \n<img:images/U87.png{scale=0.1}>" as mic
-rectangle "RME XLR BREAKOUT 1-3 \n<img:images/rme_xlr_breakout.png{scale=0.3}>" as breakout
-rectangle "NEUTRIK TT STECKFELD \n<img:images/TT_Steckfeld.png{scale=0.3}>" as steckfeld
-rectangle "AUDIO 216-16 CH \n MIKROFONVORVERSTÄRKER \n <img:images/Preamps.png{scale=0.06}>" as preamps
-rectangle "RTW TC5 \nDANTE MONITOR CONTROLLER \n<img:images/TC5.png{scale=0.3}>" as rtw
-rectangle "MACKIE 1642 VLZ4 \n<img:images/Mackie_1642vlz4.png{scale=0.1}>" as mackie
-rectangle "GENELEC 8030C (TAFEL) \n<img:images/Genelec-8030c.png{scale=0.08}>" as tafel
-rectangle "GENELEC 1038A (4-CH) \n<img:images/Genelec-1038a.png{scale=0.2}>" as quad
-rectangle "GENELEC 8040C (DOME) \n<img:images/genelec-8040.png{scale=0.17}>" as dome
+rectangle "Lautsprecher" as lautsprecher {
+  rectangle "GENELEC 8030C (TAFEL) \n<img:images/Genelec-8030c.png{scale=0.2}>" as tafel
+  rectangle "GENELEC 1038A (4-CH) \n<img:images/Genelec-1038a.png{scale=0.2}>" as quad
+  rectangle "GENELEC 8040C (DOME) \n<img:images/genelec-8040.png{scale=0.2}>" as dome
+}
+
+rectangle "Mikrofron usw. \n<img:images/U87.png{scale=0.2}>" as mic
+rectangle "RME XLR BREAKOUT 1-3 \n<img:images/rme_xlr_breakout.png{scale=0.2}>" as breakout
+rectangle "NEUTRIK TT STECKFELD \n<img:images/TT_Steckfeld.png{scale=0.2}>" as steckfeld
+rectangle "AUDIO 216-16 CH \n MIKROFONVORVERSTÄRKER \n <img:images/Preamps.png{scale=0.2}>" as preamps
+rectangle "RTW TC5 \nDANTE MONITOR CONTROLLER \n<img:images/TC5.png{scale=0.2}>" as rtw
+rectangle "MACKIE 1642 VLZ4 \n<img:images/Mackie_1642vlz4.png{scale=0.2}>" as mackie
 
 
 'hidden
-breakout -[hidden]r- preamps
-da -[hidden]r- ad
+breakout -[hidden]-> preamps
+ad -[hidden]r-> computer
+computer -[hidden]r-> ohne_dante
+mac -[hidden]d-> laptop
+apollo -[hidden]d-> fireface
+fireface -[hidden]d-> di
+di -[hidden]d-> cd
+cd -[hidden]d-> ohne_dante_out
+'da -[hidden]r- ad
 
 'digital
-ad -[#blue]-> interface
+ad -[#blue]-> interface_
 computer <-[#blue]-> interface
-interface -[#blue]-> rtw
-rtw -[#blue]-> da
+interface_ -[#blue]-> rtw
+rtw -[#blue]-> andiamo_da
 
 'analog
 mic .d.> breakout
-breakout <.d.> steckfeld
-preamps <.d.> steckfeld
+steckfeld <.> breakout
+steckfeld <.> preamps
 steckfeld -l-> ad
-da -d-> steckfeld
+andiamo_da -d-> steckfeld
 
 'zu den Lautsprechern
-steckfeld -r-> dome
-steckfeld -r-> mackie
-mackie -r-> tafel
-mackie -r-> quad
+steckfeld -d-> mackie
+steckfeld -d-> dome
+mackie -d-> tafel
+mackie -d-> quad
 
 
 'ohne Dante
-ohne_dante <......> steckfeld
-mac <.d.> apollo
-laptop <.d.> fireface
-laptop <.d.> di
-laptop <.d.> cd
+ohne_dante_out <.> steckfeld
+mac <.> apollo
+laptop <.> fireface
+laptop <.> di
+laptop <.> cd
 
 @enduml
