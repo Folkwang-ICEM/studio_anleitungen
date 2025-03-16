@@ -1,0 +1,47 @@
+@startuml
+
+skinparam linetype ortho
+'skinparam linetype polyline
+skinparam interface {
+    BackgroundColor transparent
+    BorderColor transparent
+    shadowing false
+}
+
+rectangle "eigener Rechner \n<img:images/laptop.png{scale=0.2}>" as laptop
+  
+rectangle "Interface" as interface {
+  interface " " as interface_in
+  rectangle "Dante Virtual Soundcard \n<img:images/DVS.png{scale=0.2}>" as dvs
+  rectangle "RME Digiface Dante \n<img:images/Digiface-Dante.png{scale=0.2}>" as digiface
+  interface " " as interface_out
+}
+
+rectangle "DA Wandler" as da {
+  rectangle "DIRECT OUT ANDIAMO DANTE \n32CH AD/DA Wandler \n<img:images/Andiamo.png{scale=0.2}>" as andiamo_da
+}
+
+rectangle "NEUTRIK TT STECKFELD \n<img:images/TT_Steckfeld.png{scale=0.2}>" as steckfeld
+rectangle "RTW TC5 \nDANTE MONITOR CONTROLLER \n<img:images/TC5.png{scale=0.2}>" as rtw
+rectangle "MACKIE 1642 VLZ4 \n<img:images/Mackie_1642vlz4.png{scale=0.2}>" as mackie
+rectangle "GENELEC 1038A (4-CH) \n<img:images/Genelec-1038a.png{scale=0.2}>" as quad
+
+'hidden
+interface_in -[hidden]> digiface
+digiface -[hidden]> dvs
+dvs -[hidden]> interface_out
+interface -[hidden]l-> laptop
+
+'digital
+laptop -[#blue]r-> interface_in
+interface_out -[#blue]> rtw
+rtw -[#blue]> andiamo_da
+
+'analog
+andiamo_da -> steckfeld
+
+'zu den Lautsprechern
+steckfeld -r-> mackie
+mackie -r-> quad
+
+@enduml
