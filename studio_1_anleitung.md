@@ -48,6 +48,8 @@ Zusätzlich gibt es optionale Treiber, um das Digiface auch als Netzwerkswitch z
 ## ANALOG
 Alle analogen Leitungen verlaufen über die Neutrik TT-Steckfelder im Rack und sind für die häufigsten Anwendungsfälle ohne zusätzliches Verkabeln vorbereitet, dank der Normalisierung der Steckfelder. Normalisierung bedeutet in diesem Kontext, dass Signale weitergeleitet werden, als ob ein Kabel eingesteckt wäre. Spezifisch sind die Steckfelder halb-normalisiert nach unten, d. h., von der oberen Buchse zur unteren Buchse. Alle Buchsen mit Beschriftung auf weißem Hintergrund sind halb-normalisiert. Die Verbindung wird unterbrochen, wenn ein Kabel in die untere Buchse eingesteckt wird. Im Gegensatz dazu unterbricht das Einstecken oben die Verbindung nicht, sondern wirkt wie ein Splitter: Das Signal setzt seinen Weg nach unten fort und fließt gleichzeitig durch das eingesteckte Kabel.
 
+![Visualisierung Normalisierung](normalisierung.png)
+
 Die Verbindungen zu den Lautsprechern L und R an der Wand sowie zu den Lautsprechern 1-4 erfolgen über das Mackie 1642 VLZ4 Mischpult am Fenster. Die Lautsprecher LR sind an den MAIN OUT des Pultes angeschlossen, während die Lautsprecher 1-4 an die BUSSE 1-4 angeschlossen sind. Alles ist über die Neutrik-Steckfelder normalisiert (siehe oben).
 Die Inputs des Mackie-Pults sind wie folgt belegt:
 
@@ -84,7 +86,7 @@ Studio 1 ist für verschiedene Abhör-Szenarien konzipiert:
 - Mono bis 20.1 Mehrkanal (DANTE) über Dante Virtual Soundcard mit eigenem Rechner, MacPro (Serverraum) oder AstroSpatial Rechner (Serverraum), oder ein anderes externes Gerät (z. B. LINUX Rechner über das Soundcraft Pult).
 - Arbeiten mit eigenen Rechnern am großen Tisch am Fenster (RME FIREFACE UC oder Miniklinke).
 
-WICHTIG: Die Dante Virtual Soundcard (DVS) und das Digiface Dante von RME erfüllen dieselbe Funktion. Die Verwendung des Digiface anstelle von DVS bietet zahlreiche Vorteile und entlastet den Computer erheblich. Es sollte entweder das eine oder das andere verwendet werden und nicht beide gleichzeitig. Anders ausgedrückt: Wenn das Digiface genutzt werden soll, ist das Starten von DVS nicht erforderlich (oder empfohlen).
+*WICHTIG:* Die Dante Virtual Soundcard (DVS) und das Digiface Dante von RME erfüllen dieselbe Funktion. Die Verwendung des Digiface anstelle von DVS bietet zahlreiche Vorteile und entlastet den Computer erheblich. Es sollte entweder das eine oder das andere verwendet werden und nicht beide gleichzeitig. Anders ausgedrückt: Wenn das Digiface genutzt werden soll, ist das Starten von DVS nicht erforderlich (oder empfohlen).
 
 ### Mono bis 20.1 Mehrkanal (DANTE) über Digiface mit eigenem Rechner oder MacPro
 
@@ -103,9 +105,10 @@ An den eigenen Rechner muss folgendes angeschlossen werden:
 - USB, HDMI (Alle Kabel mit Grüne Beschriftung) die mit den KVM Switch verbunden sind. **KVM Switch auf PC3 setzen.**
 - Netzwerk (Adapter auf USB-C liegt dabei, Kabel mit Grüne Beschriftung)
 - Strom, wenn gewünscht.
-- MacStudio (Serverraum)
+
+**MacStudio (Serverraum)**
 - DigifaceDANTE (USB-C Kabel mit weißer Beschriftung) and den passenden Dock anschliessen
-KVM Switch auf PC1 setzen
+- KVM Switch auf PC1 setzen
 
 Zentral für dieses Setup ist das RME DigifaceDANTE USB Interface am Tisch, das über USB3 angeschlossen wird (ein Kabel mit USB-A und USB-C Anschlüssen liegt am Tisch). Es fungiert als Schnittstelle zwischen den eigenen Rechnern und dem DANTE Netzwerk. Weitere Informationen finden Sie [hier](LINK AUF DIGIFACE).
 
