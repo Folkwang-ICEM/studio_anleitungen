@@ -100,12 +100,11 @@ Das Routing im DIGIFACE wird durch die Software TotalMix gesteuert. Das Standard
 
 **Das Routing im TotalMix ist standardmäßig wie folgt:**
 
-Ins PHONES BUS gehen alle SOFTWARE PLAYBACK Kanäle. 
-Andernfalls werden die Software Playback-Kanäle einzeln in die entsprechenden Busse geleitet:
-SOFTWARE PLAYBACK 1—> HARDWARE OUTPUT 1
-SOFTWARE PLAYBACK 2 —> HARDWARE OUTPUT 2
-SOFTWARE PLAYBACK 3 —> HARDWARE OUTPUT 4
-Usw.
+Ins PHONES BUS gehen alle SOFTWARE PLAYBACK Kanäle. Andernfalls werden die Software Playback-Kanäle einzeln in die entsprechenden Busse geleitet:
+- SOFTWARE PLAYBACK 1—> HARDWARE OUTPUT 1
+- SOFTWARE PLAYBACK 2 —> HARDWARE OUTPUT 2
+- SOFTWARE PLAYBACK 3 —> HARDWARE OUTPUT 4
+- ... Usw.
 
 Zusätzlich werden die Eingänge 41 bis 64 in die Ausgänge 1 bis 24 geleitet, um externe Geräte (wie das Soundcraft Pult für LINUX Nutzer) oder DVS-Rechner (wie den MacStudio oder Astrospatial im Serverraum) anzuschließen.
 
@@ -119,7 +118,7 @@ S1 Reset St: Wie S1 Reset aber mit Stereo Kanäle
 S1 no Ext: Wie S1 Reset ohne die Sends von Inputs 41 bis 64 in die Outputs 1 bis 24.
 S1 Backup: Ein Backup von S1 Reset falls man es aus Versehen überschreibt.
 
-(BILD TOTALMIX) TODO
+![Screenshot Totalmix](/images/totalmix.png)
 
 ### Wandler
 Die Wandlung zwischen dem DANTE Netzwerk und der analogen Welt erfolgt über das ANDIAMO von Direct Out und/oder das RedNet MP8R von Focusrite. Beide Geräte befinden sich im Rack und sind bereits in das DANTE Netzwerk integriert.
@@ -132,20 +131,20 @@ Die digitalen Signale aus den Wandlern werden mittels des Dante Controller auf d
 
 **Das Routing im Dante Controller ist Standardmäßig wie folgt:** 
 
-ANDIAMO TRANSMITTER (OUT) 1 - 32 —> DIGIFACE RECEIVER (IN) 1 - 32
-REDNET MP8R TRANSMITTER (OUT) 1 - 8 —> DIGIFACE RECEIVER (IN) 33 - 40
+- ANDIAMO TRANSMITTER (OUT) 1 - 32 —> DIGIFACE RECEIVER (IN) 1 - 32
+- REDNET MP8R TRANSMITTER (OUT) 1 - 8 —> DIGIFACE RECEIVER (IN) 33 - 40
+-
+- ANDIAMO TRANSMITTER (OUT) 1 - 32 —> MACSTUDIO (DVS) RECEIVER (IN) 1 - 24
+- REDNET MP8R TRANSMITTER (OUT) 1 - 8 —> MACSTUDIO (DVS) RECEIVER (IN) 25 - 32
+-
+- MACSTUDIO (DVS) TRANSMITTER (OUT) 1 -24 —> DIGIFACE RECEIVER (IN) 41 - 64
+-
+- DIGIFACE TRANSMITTER (OUT) 1 - 24 —> RTW TC5 RECEIVER (IN) 1 - 24
+- DIGIFACE TRANSMITTER (OUT) 25 - 33 —> ANDIAMO RECEIVER (IN) 25 - 33
+-
+- RTW TC5 TRANSMITTER (OUT) 1 - 24 —> ANDIAMO RECEIVER (IN) 1 - 24
 
-ANDIAMO TRANSMITTER (OUT) 1 - 32 —> MACSTUDIO (DVS) RECEIVER (IN) 1 - 24
-REDNET MP8R TRANSMITTER (OUT) 1 - 8 —> MACSTUDIO (DVS) RECEIVER (IN) 25 - 32
-
-MACSTUDIO (DVS) TRANSMITTER (OUT) 1 -24 —> DIGIFACE RECEIVER (IN) 41 - 64
-
-DIGIFACE TRANSMITTER (OUT) 1 - 24 —> RTW TC5 RECEIVER (IN) 1 - 24
-DIGIFACE TRANSMITTER (OUT) 25 - 33 —> ANDIAMO RECEIVER (IN) 25 - 33
-
-RTW TC5 TRANSMITTER (OUT) 1 - 24 —> ANDIAMO RECEIVER (IN) 1 - 24
-
-(BILD DANTE CONTROLLER) TODO
+![Screenshot Dante Controller](/images/dantecontroller.png)
 
 **Dieses Routing sollte nicht verändert, oder nach jeder Änderung für den nächsten Nutzer zurückgesetzt werden!**
 
