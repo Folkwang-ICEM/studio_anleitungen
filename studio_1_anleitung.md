@@ -183,23 +183,31 @@ Das Soundcraft Pult ist aktuell das einzige DANTE fähige Gerät, das class comp
 ### mobiler Arbeitsplatz
 
 - Laptop wie [hier](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macstudio) beschrieben anschließen.
-- Audio auf Kanäle 1-2 des Digiface schicken (TODO genauere Namen).
-- Lautstärke am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) regeln.
+- Audio auf die ersten zwei Kanäle (Dante 1+2) des Digiface schicken.
+- Am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) die ersten zwei Kanäle über die Knöpfe und Panorama auf LR schicken. Über die Fader und "Main Mix", sowie den RTW TouchControl die Lautstärke regeln.
+
 ![Diagramm Laptop -> Stereo](/graph/laptop-stereo.png)
 
 ### Arbeitsplatz großer Tisch
-- RME Fireface am Tiscch über USB Kabel anschließen (benötigt RME Treiber)
+- RME Fireface am Tiscch über USB Kabel anschließen (benötigt RME Treiber). Ein Doppelklick auf den Drehknopf schaltet das Interface zwischen Mac und Windows um (dabei darf das Gerät nicht angeschlossen sein).
+- Audio auf die ersten zwei Kanäle (AN 1+2) schicken.
+- Am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) die entsprechenden mit "RME FIREFACE" markierten Kanäle über die Knöpfe und Panorama auf LR schicken. Über die Fader und "Main Mix" die Lautstärke regeln.
 
-- am Steckfeld Fireface Outs 1-2 auf ... stecken...
 ![Diagramm Laptop -> Stereo](/graph/laptop-stereo-no-dante.png)
 
 ## Lautsprecher 1-4
 ### mobiler Arbeitsplatz
+- Laptop wie [hier](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macstudio) beschrieben anschließen.
+- Audio auf die ersten vier Kanäle (Dante 1-4) des Digiface schicken.
+- Am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) die ersten vier Kanäle über die Knöpfe und Panorama Regler auf 1-2, bzw. 3-4 schicken. Über die Fader und "Main Mix", sowie den RTW TouchControl die Lautstärke regeln.
+
 ### Arbeitsplatz großer Tisch
+- RME Fireface am Tiscch über USB Kabel anschließen (benötigt RME Treiber). Ein Doppelklick auf den Drehknopf schaltet das Interface zwischen Mac und Windows um (dabei darf das Gerät nicht angeschlossen sein).
+- Audio auf die ersten vier Kanäle (AN 1-4) schicken.
+- Am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) die entsprechenden mit "RME FIREFACE" markierten Kanäle über die Knöpfe und Panorama Regler auf 1-2, bzw. 3-4 schicken. Über die Fader und "LS 1-4" die Lautstärke regeln.
 
 ## DOME
 ### mobiler Arbeitsplatz
-### Arbeitsplatz großer Tisch
 
 ## Aufnahme
 ### mobiler Arbeitsplatz
@@ -217,7 +225,7 @@ Die Lautsprecherkonstellation bleibt erstmal nach der inoffizielle ICEM-Norm bes
 
 # Kopfhörer monitoring
 
-Sowohl das RME Digiface als auch der RTW TouchControler verfügen über einen Kopfhörer Ausgang. Für das Digiface kann über TotalMix bestimmt werden, was auf den Koopfhörer Ausgang geschickt wird. Der RTW TouchControler schickt eine Stereosumme auf die Kopfhörer. Aufwendigere Setups sind aktuell nicht so einfach umzusetzen. Über die Breakouts an der Patchbay können natürlich auch Kopfhörerverstärker betrieben werden. Um Hardware und Unterstützung für so ein Vorhaben zu erhalten, sollte es rechtzeitig angekündigt werden.
+Sowohl das RME Digiface als auch der RTW TouchControl verfügen über einen Kopfhörer Ausgang. Für das Digiface kann über TotalMix bestimmt werden, was auf den Koopfhörer Ausgang geschickt wird. Der RTW TouchControl schickt eine Stereosumme auf die Kopfhörer. Aufwendigere Setups sind aktuell nicht so einfach umzusetzen. Über die Breakouts an der Patchbay können natürlich auch Kopfhörerverstärker betrieben werden. Um Hardware und Unterstützung für so ein Vorhaben zu erhalten, sollte es rechtzeitig angekündigt werden.
 
 
 # Troubleshooting
