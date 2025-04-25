@@ -4,16 +4,16 @@ Studio 1 verfügt über ein äußerst leistungsfähiges, wenn auch etwas komplex
 
 Zu den Ausstattungsmerkmalen gehören hochwertige Lautsprecher, ein erstklassiger AD/DA-DANTE-Wandler, und ein Flaggschiff-8-Kanal-Mikrofonvorverstärker und (Dante-) Wandler. Darüber hinaus steht eine hochqualitative analoge 16-Kanal-Mikrofonvorverstärkeranlage zur Verfügung.
 
-Für entspanntere Stereo- oder Quad-Setups besteht die Möglichkeit, das FIREFACE UC (oder Miniklinke/DI) und das Mackie-Pult zu verwenden, ohne auf das DANTE-Netz zurückgreifen zu müssen, ähnlich wie in der Vergangenheit. Dabei ersetzt das Mackie-Pult das frühere Abhörsystem.
+Für weniger aufwendige Stereo- oder Quad-Setups besteht die Möglichkeit, das FIREFACE UC (oder Miniklinke/DI) und das Mackie-Pult zu verwenden, ohne auf das DANTE-Netz zurückgreifen zu müssen. Ähnlich wie in der Vergangenheit. Dabei ersetzt das Mackie-Pult das frühere Abhörsystem.
 
 
-# Drivers und Links
+# Treiber und Links
 
 ### RME - DIGIFACE DANTE
 - https://rme-audio.de/driverkit-vs-kernel-extension.html (INFO)
 - https://rme-audio.de/downloads.html
 
-RME bietet verschiedene Treiberarten für Apple-Rechner an. Weitere Informationen finden Sie im oben stehenden Link. In den nächsten Jahren wird sich dies voraussichtlich ändern.
+RME bietet verschiedene Treiberarten für Apple-Rechner an. Weitere Informationen findet man im oben stehenden Link. In den nächsten Jahren wird sich dies voraussichtlich ändern.
 
 Zusätzlich gibt es optionale Treiber, um das Digiface auch als Netzwerkswitch zu verwenden, anstatt einen zusätzlichen Netzwerkanschluss für die Steuerung des Dante-Netzwerks zu benötigen (RME Network Interface für Digiface AVB und Digiface Dante).
 
@@ -26,7 +26,7 @@ Zusätzlich gibt es optionale Treiber, um das Digiface auch als Netzwerkswitch z
 - https://downloads.focusrite.com/focusrite-pro/rednet/rednet-mp8r
 
 
-# Geräte/Verbindungen Arbeitsplatz
+# Geräte und Anschlüsse am Arbeitsplatz
 
 - RTW TC5 Monitor Controller - Verbunden mit dem DANTE Netzwerk (mit Strom über PoE)
 - RME Digiface DANTE - USB Anschlusskabel 
@@ -41,14 +41,20 @@ Zusätzlich gibt es optionale Treiber, um das Digiface auch als Netzwerkswitch z
 - Maus/Tastatur angeschlossen an den KVM Switch
 - Bildschirm angeschlossen an den KVM Switch
 
+
 # Setup
 
-(KOMPONENTENDIAGRAM)
+![Diagramm Laptop -> Stereo](/graph/diagram.png)
 
-## ANALOG
+## ANALOG (schwarze Pfeile im Diagramm)
+
+### Patchbay 
+
 Alle analogen Leitungen verlaufen über die Neutrik TT-Steckfelder im Rack und sind für die häufigsten Anwendungsfälle ohne zusätzliches Verkabeln vorbereitet, dank der Normalisierung der Steckfelder. Normalisierung bedeutet in diesem Kontext, dass Signale weitergeleitet werden, als ob ein Kabel eingesteckt wäre. Spezifisch sind die Steckfelder halb-normalisiert nach unten, d. h., von der oberen Buchse zur unteren Buchse. Alle Buchsen mit Beschriftung auf weißem Hintergrund sind halb-normalisiert. Die Verbindung wird unterbrochen, wenn ein Kabel in die untere Buchse eingesteckt wird. Im Gegensatz dazu unterbricht das Einstecken oben die Verbindung nicht, sondern wirkt wie ein Splitter: Das Signal setzt seinen Weg nach unten fort und fließt gleichzeitig durch das eingesteckte Kabel.
 
 ![Visualisierung Normalisierung](normalisierung.png)
+
+### Mackie Mischpult, Lautsprecher 1-4 und LR
 
 Die Verbindungen zu den Lautsprechern L und R an der Wand sowie zu den Lautsprechern 1-4 erfolgen über das Mackie 1642 VLZ4 Mischpult am Fenster. Die Lautsprecher LR sind an den MAIN OUT des Pultes angeschlossen, während die Lautsprecher 1-4 an die BUSSE 1-4 angeschlossen sind. Alles ist über die Neutrik-Steckfelder normalisiert (siehe oben).
 Die Inputs des Mackie-Pults sind wie folgt belegt:
@@ -64,22 +70,20 @@ Das Routing wird über das Pult mittels Knöpfe und Panorama-Einstellungen geste
 
 - Input Gain: ganz nach links (-20dB bzw U)
 - PAN: 1 L, 2 R, 3 L, 4 R
-- Level: auf Maximum (+10dB)
-- Routing: Kanal 1 und 2 auf Bus 1-2
-- Routing: Kanal 3 und 4 auf Bus 3-4
+- EQ: Alles auf 0
+- Routing: Kanal 1 und 2 auf Bus 1-2, Kanal 3 und 4 auf Bus 3-4
+- Level: Fader der Kanäle 1-4 und Fader der Ausgänge auf Maximum (+10dB)
 
-Alle Mikrofoneingänge der REDNET MP8R und des AUDIO216-Vorverstärkermoduls ('PREAMPS') stehen über die Neutrik-Steckfelder zur Verfügung, Mikrofone werden über die 3 XLR ‘Breakout’-Panels angeschlossen. Diese Anschlüsse sind NICHT normalisiert und müssen manuell gepatcht werden. 
+### Mikrofrone, Vorverstärker, Wandler
 
-Ein Beispiel: Ein Mikrofon (XLR-Kabel) wird in XLR Breakout 1, Buchse 1 gesteckt. Im Steckfeld wird dann XLR 1,1 auf REDNET In 1 gepatcht.
-
-Die LINE-Ausgänge (verstärkte Mikrofonsignale) der AUDIO216 PREAMPS sind über die Steckfelder mit den Inputs 1-16 des ANDIAMO verbunden und normalisiert. 
+Alle Mikrofoneingänge des Focusrite REDNET MP8R und des AUDIO216-Vorverstärkermoduls ('PREAMPS') stehen über die Neutrik-Steckfelder zur Verfügung, Mikrofone werden über die 3 XLR ‘Breakout’-Panels angeschlossen. Diese Anschlüsse sind NICHT normalisiert und müssen manuell gepatcht werden. 
 
 Beispiel: Ein Mikrofon (XLR-Kabel) wird in XLR Breakout 1, Buchse 1 gesteckt. Im Steckfeld wird dann XLR 1,1 auf PREAMPS In 1 gepatcht. Die Vorverstärker werden eingestellt, und das Signal geht über die Normalisierung direkt auf Input 1 des ANDIAMO.
 
 Andere LINE-Analogsignale können direkt über das XLR-Breakout und die Steckfelder (oder mittels TT-Adapterkabel) direkt auf das ANDIAMO geschickt werden, um dort digitalisiert und ins DANTE-Netzwerk übertragen zu werden.
 
+## DIGITAL/DANTE (blaue Pfeile im Diagramm)
 
-## DIGITAL/DANTE
 Studio 1 ist für verschiedene Abhör-Szenarien konzipiert:
 
 - Mono bis 20.1 Mehrkanal (DANTE) über Digiface mit eigenem Rechner oder MacPro
@@ -88,35 +92,43 @@ Studio 1 ist für verschiedene Abhör-Szenarien konzipiert:
 
 *WICHTIG:* Die Dante Virtual Soundcard (DVS) und das Digiface Dante von RME erfüllen dieselbe Funktion. Die Verwendung des Digiface anstelle von DVS bietet zahlreiche Vorteile und entlastet den Computer erheblich. Es sollte entweder das eine oder das andere verwendet werden und nicht beide gleichzeitig. Anders ausgedrückt: Wenn das Digiface genutzt werden soll, ist das Starten von DVS nicht erforderlich (oder empfohlen).
 
-### Mono bis 20.1 Mehrkanal (DANTE) über Digiface mit eigenem Rechner oder MacPro
+### RME DigifaceDANTE und TotalMix
 
-Benötigte Software/Treiber: Die erforderliche Software und Treiber umfassen RME Treiber und Software, REDNET Steuerungssoftware sowie den Dante Controller.
+Zentral für das Arbeiten am Arbeitsplatz ist das RME DigifaceDANTE USB Interface am Tisch, das über USB3 angeschlossen wird (ein Kabel mit USB-A und USB-C Anschlüssen liegt am Tisch). Es fungiert als Schnittstelle zwischen den eigenen Rechnern und dem DANTE Netzwerk. Weitere Informationen findet man [hier](LINK AUF DIGIFACE). TODO Link
 
-Die Lautstärke, das Monitoring und das Bassmanagement für alle Lautsprecher im DOME (20.1) werden über das RTW TouchControl 5 (TC5) gesteuert. Für Lautsprecher 1-4 müssen am MACKIE PULT (am Fenster) die Fader für Kanäle 1-4 UND für die Busse 1-4 ganz oben stehen, bis zum Anschlag, um die richtige Lautstärke der 4 Lautsprecher im Zusammenhang mit allen anderen zu erreichen. Weitere Informationen zum TC5 finden Sie [hier](LINK AUF TC5) und zum Lautsprecher-Setup [hier](LINK AUF LS SETUP).
+Das Routing im DIGIFACE wird durch die Software TotalMix gesteuert. Das Standard-Preset, oder WORKSPACE benannt kann [hier](LINK AUF DOWNLOADS) gefunden werden, und weitere Informationen zu TotalMix sind [hier](https://rme-audio.de/de_totalmix-fx.html) verfügbar.  TODO Link
 
-An den eigenen Rechner muss folgendes angeschlossen werden: 
+**Das Routing im TotalMix ist standardmäßig wie folgt:**
 
-**Für Apple Rechner mit Thunderbolt 3 oder neuer:**
-- DigifaceDANTE (USB-C Kabel mit weißer Beschriftung)
-- TB3 Dock (Thunderbolt/USB-C Kabel mit Rote Beschriftung) für Strom, Dante Netzwerk, und KVM Switch. **KVM Switch auf PC2 setzten**
+Ins PHONES BUS gehen alle SOFTWARE PLAYBACK Kanäle. 
+Andernfalls werden die Software Playback-Kanäle einzeln in die entsprechenden Busse geleitet:
+SOFTWARE PLAYBACK 1—> HARDWARE OUTPUT 1
+SOFTWARE PLAYBACK 2 —> HARDWARE OUTPUT 2
+SOFTWARE PLAYBACK 3 —> HARDWARE OUTPUT 4
+Usw.
 
-**Windows Rechner oder ältere Apple Rechner:**
-- DigifaceDANTE (USB-C/USB-A Kabel mit weißer Beschriftung)
-- USB, HDMI (Alle Kabel mit Grüne Beschriftung) die mit den KVM Switch verbunden sind. **KVM Switch auf PC3 setzen.**
-- Netzwerk (Adapter auf USB-C liegt dabei, Kabel mit Grüne Beschriftung)
-- Strom, wenn gewünscht.
+Zusätzlich werden die Eingänge 41 bis 64 in die Ausgänge 1 bis 24 geleitet, um externe Geräte (wie das Soundcraft Pult für LINUX Nutzer) oder DVS-Rechner (wie den MacPro oder Astrospatial im Serverraum) anzuschließen.
 
-**MacStudio (Serverraum)**
-- DigifaceDANTE (USB-C Kabel mit weißer Beschriftung) and den passenden Dock anschliessen
-- KVM Switch auf PC1 setzen
+HARDWARE INPUT 41 —> HARDWARE OUTPUT 1
+HARDWARE INPUT 42 —> HARDWARE OUTPUT 2
 
-Zentral für dieses Setup ist das RME DigifaceDANTE USB Interface am Tisch, das über USB3 angeschlossen wird (ein Kabel mit USB-A und USB-C Anschlüssen liegt am Tisch). Es fungiert als Schnittstelle zwischen den eigenen Rechnern und dem DANTE Netzwerk. Weitere Informationen finden Sie [hier](LINK AUF DIGIFACE).
+Die Inputs 1 bis 40 gehen standardmäßig NICHT in die PHONES oder andere OUTPUT BUSSE, um die Gefahr von Rückkopplungen zu vermeiden.
+Die Workspace Datei enthält außerdem verschiedene SNAPSHOTS:
+S1 Reset: stellt alles ein wie oben beschrieben
+S1 Reset St: Wie S1 Reset aber mit Stereo Kanäle
+S1 no Ext: Wie S1 Reset ohne die Sends von Inputs 41 bis 64 in die Outputs 1 bis 24.
+S1 Backup: Ein Backup von S1 Reset falls man es aus Versehen überschreibt.
 
+(BILD TOTALMIX) TODO
+
+### Wandler
 Die Wandlung zwischen dem DANTE Netzwerk und der analogen Welt erfolgt über das ANDIAMO von Direct Out und/oder das RedNet MP8R von Focusrite. Beide Geräte befinden sich im Rack und sind bereits in das DANTE Netzwerk integriert.
-- Das ANDIAMO ist ein 32-Kanal-Line-AD/DA-Wandler (Analog-zu-Digital/Digital-zu-Analog). Weitere Informationen finden Sie [hier](LINK AUF ANDIAMO).
-- Das REDNET MP8R ist ein 8-Kanal-Mikrofonvorverstärker und AD-Wandler. Weitere Informationen finden Sie [hier](LINK AUF REDNET).
+- Das ANDIAMO ist ein 32-Kanal-Line-AD/DA-Wandler (Analog-zu-Digital/Digital-zu-Analog). Weitere Informationen findet man [hier](LINK AUF ANDIAMO). TODO Link
+- Das REDNET MP8R ist ein 8-Kanal-Mikrofonvorverstärker und AD-Wandler. Weitere Informationen findet man [hier](LINK AUF REDNET). TODO Link
 
-Die digitalen Signale aus beiden Geräten werden mittels Dante Controller auf das DigifaceDANTE geroutet. Das Preset für den Dante Controller kann [hier](LINK AUF DOWNLOADS) heruntergeladen werden. Das Laden des Presets im Dante Controller setzt alles zurück auf das Standard-Setup, falls etwas verstellt wurde.
+### Dante Controller
+
+Die digitalen Signale aus den Wandlern werden mittels des Dante Controller auf das DigifaceDANTE geroutet. Das Preset für den Dante Controller kann [hier](LINK AUF DOWNLOADS) heruntergeladen werden. Das Laden des Presets im Dante Controller setzt alles zurück auf das Standard-Setup, falls etwas verstellt wurde. TODO Link
 
 **Das Routing im Dante Controller ist Standardmäßig wie folgt:** 
 
@@ -135,93 +147,102 @@ RTW TC5 TRANSMITTER (OUT) 1 - 24 —> ANDIAMO RECEIVER (IN) 1 - 24
 
 (BILD DANTE CONTROLLER)
 
-Das Routing im DIGIFACE wird durch die Software TotalMix gesteuert. Das Standard-Preset, oder WORKSPACE benannt kann [hier](LINK AUF DOWNLOADS) gefunden werden, und weitere Informationen zu TotalMix sind [hier](LINK ZU TOTALMIX) verfügbar. https://rme-audio.de/de_totalmix-fx.html 
+**Dieses Routing sollte nicht verändert, oder nach jeder Änderung für den nächsten Nutzer zurückgesetzt werden!**
 
-**Das Routing im TotalMix ist standardmäßig wie folgt:**
+### RTW TouchControl 5
 
-Ins PHONES BUS gehen alle SOFTWARE PLAYBACK Kanäle. 
-Andernfalls werden die Software Playback-Kanäle einzeln in die entsprechenden Büsse geleitet:
-SOFTWARE PLAYBACK 1—> HARDWARE OUTPUT 1
-SOFTWARE PLAYBACK 2 —> HARDWARE OUTPUT 2
-SOFTWARE PLAYBACK 3 —> HARDWARE OUTPUT 4
-Usw.
+Der RTW TouchControl 5 (TC5) steuert die Lautstärke, das Monitoring und das Bassmanagement für alle Lautsprecher im DOME (20.1). Um die Lautstärke der Lautsprecher 1-4 an alle anderen anzupassen, muss das MACKIE PULT (am Fenster) wie [hier](#mackie-mischpult-lautsprecher-14-und-lr) beschrieben eingerichtet werden. Weitere Informationen zum TC5 findet man [hier](LINK AUF TC5) und zum Lautsprecher-Setup [hier](LINK AUF LS SETUP). TODO Links
 
-Zusätzlich werden die Eingänge 41 bis 64 in die Ausgänge 1 bis 24 geleitet, um externe Geräte (wie das Soundcraft Pult für LINUX Nutzer) oder DVS-Rechner (wie den MacPro oder Astrospatial im Serverraum) anzuschließen.
+# Routings für die meisten Anwendungsfälle
 
-HARDWARE INPUT 41 —> HARDWARE OUTPUT 1
-HARDWARE INPUT 42 —> HARDWARE OUTPUT 2
+## Einen Studio-PC oder den eigenen Rechner anschließen
 
-Die Inputs 1 bis 40 gehen standardmäßig NICHT in die PHONES oder andere OUTPUT BUSSE, um die Gefahr von Rückkopplungen zu vermeiden.
-Das Workspace Datei enthält ausserdem verschiedene SNAPSHOTS:
-S1 Reset: stellt alles wie oben beschrieben
-S1 Reset St: Wie S1 Reset aber mit Stereo Kanäle
-S1 no Ext: Wie S1 Reset ohne die sends von Inputs 41 bis 64 in die Outputs 1 bis 24.
-S1 Backup: Ein Backup von S1 Reset falls man es aus Versehen überschreibt.
+### Mono bis 20.1 Mehrkanal (DANTE) über Digiface mit eigenem Rechner oder MacPro
 
-(BILD TOTALMIX)
+Benötigte Software/Treiber: Die erforderliche Software und Treiber umfassen RME Treiber und Software, REDNET Steuerungssoftware sowie den Dante Controller.
 
+An den eigenen Rechner muss folgendes angeschlossen werden: 
+
+**Für Apple Rechner mit Thunderbolt 3 oder neuer:**
+- DigifaceDANTE (USB-C Kabel mit weißer Beschriftung)
+- TB3 Dock (Thunderbolt/USB-C Kabel mit Rote Beschriftung) für Strom, Dante Netzwerk, und KVM Switch. **KVM Switch auf PC2 setzten**
+
+**Windows Rechner oder ältere Apple Rechner:**
+- DigifaceDANTE (USB-C/USB-A Kabel mit weißer Beschriftung)
+- USB, HDMI (Alle Kabel mit Grüne Beschriftung) die mit den KVM Switch verbunden sind. **KVM Switch auf PC3 setzen.**
+- Netzwerk (Adapter auf USB-C liegt dabei, Kabel mit Grüne Beschriftung)
+- Strom, wenn gewünscht.
+
+**MacStudio (Serverraum)**
+- DigifaceDANTE (USB-C Kabel mit weißer Beschriftung) an den passenden Dock anschliessen
+- KVM Switch auf PC1 setzen
 
 ### Mono bis 20.1 Mehrkanal (DANTE) über Dante Virtual Soundcard (DVS) mit eigenem Rechner, MacPro (Serverraum) oder AstroSpatial Rechner (Serverraum), oder ein anderes externes Gerät (z. B. LINUX Rechner über das Soundcraft Pult).
 
+TODO braucht es diesen Abschnitt?? dann mehr info zum Anschließen
+
 WICHTIG: Obwohl das Digiface nicht als Schnittstelle zwischen dem Rechner und dem Dante Netzwerk fungiert, werden die Signale über das Digiface  trotzdem geleitet. Es agiert wie eine Matrix, die die Signale aus DVS oder dem externen Gerät in den Monitor Controller TC5 und Andiamo weiterleitet. Dies ist zwar nicht zwingend notwendig, vereinfacht jedoch deutlich das Routing im Dante-System.
 
+## Tafel Stereo
+### mobiler Arbeitsplatz
 
-# Routings für typische Anwendungsfälle
-
-## Eigener Rechner
-
-### Eigener Rechner -> Stereo Abhöre
-
-*Mit Dante* TODO
-
-- Laptop anschließen (siehe [diesen Abschnitt](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macpro))
-- RME Digiface verbinden (dafür muss der RME treiber installiert sein)
-- Audio auf 1-2 schicken
-- Am Mischpult Lautstärke einstellen
-
+- Laptop wie [hier](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macpro) beschrieben anschließen.
+- Audio auf Kanäle 1-2 des Digiface schicken (TODO genauere Namen).
+- Lautstärke am [Mischpult](#mackie-mischpult-lautsprecher-14-und-lr) regeln.
 ![Diagramm Laptop -> Stereo](/graph/laptop-stereo.png)
 
-*Ohne Dante* TODO
+### Arbeitsplatz großer Tisch
+- RME Fireface am Tiscch über USB Kabel anschließen (benötigt RME Treiber)
 
-- Über USB Kabel am FIREFACE am Tisch anschließen (dafür muss der RME treiber installiert sein)
 - am Steckfeld Fireface Outs 1-2 auf ... stecken...
-
 ![Diagramm Laptop -> Stereo](/graph/laptop-stereo-no-dante.png)
 
-### Eigener Rechner -> Stereo Tafel
+## Lautsprecher 1-4
+### mobiler Arbeitsplatz
+### Arbeitsplatz großer Tisch
 
-### Eigener Rechner -> Quadro Abhöre
+## DOME
+### mobiler Arbeitsplatz
+### Arbeitsplatz großer Tisch
 
-### Eigener Rechner -> DOME
-
-### Aufnahme mit dem eigenen Rechner
-
-## Studio PC
-
-### Studio PC -> Stereo Abhöre
-
-### Studio PC -> Quadro Abhöre
-
-### Studio PC -> DOME
-
-### Aufnehmen mit dem Studio PC
+## Aufnahme
+### mobiler Arbeitsplatz
+### Arbeitsplatz großer Tisch
 
 
 # Lautsprecher Setup
 
-Die Lautsprecherkonstellation bleibt erstmal nach der inoffizielle ICEM-Norm: Lautsprecher werden nach Ringen oder Ebenen im Uhrzeigersinn anfangend vorne links. 
-Lautsprecher 1-4: Quadrofonischen Setup, große Genelecs 1038.
-Lautsprecher 5-8: Genelec 8040 zwischen Positionen 1-4. 5 ist Center vorne
-Lautsprecher 9-12: Genelec 8040 Top Ebene. Vorne links ist 9 
-Lautsprecher 13-20: Genelec 8040 untere Ring, vorne links ist 13
-Lautsprecher 21: Genelec 1092 Subwoofer
+Die Lautsprecherkonstellation bleibt erstmal nach der inoffizielle ICEM-Norm bestimmt: Lautsprecher werden nach Ringen oder Ebenen im Uhrzeigersinn anfangend vorne links nummeriert. 
+- Lautsprecher 1-4: Quadrofonischen Setup, große Genelecs 1038.
+- Lautsprecher 5-8: Genelec 8040 zwischen Positionen 1-4. 5 ist Center vorne
+- Lautsprecher 9-12: Genelec 8040 Top Ebene. Vorne links ist 9 
+- Lautsprecher 13-20: Genelec 8040 untere Ring, vorne links ist 13
+- Lautsprecher 21: Genelec 1092 Subwoofer
+
+# Kopfhörer monitoring
+
+Sowohl das RME Digiface als auch der RTW TouchControler verfügen über einen Kopfhörer Ausgang. Für das Digiface kann über TotalMix bestimmt werden, was auf den Koopfhörer Ausgang geschickt wird. Der RTW TouchControler schickt eine Stereosumme auf die Kopfhörer. Aufwendigere Setups sind aktuell nicht so einfach umzusetzen. Über die Breakouts an der Patchbay können natürlich auch Kopfhörerverstärker betrieben werden. Um Hardware und Unterstützung für so ein Vorhaben zu erhalten, sollte es rechtzeitig angekündigt werden.
 
 
 # Troubleshooting
 
 ## Ich habe keinen Ton - woran kann es liegen?
-## mehr
-## mehr
+### totalmix nicht anfassen aber kann zu problemen führen.
+### Dante controller sollte nicht angefasst werden, aber kann zu problemen führen. 
+### mischpult gemutet, fader runtter oder falsch geroutet, falscher gain
+### patchbay checken
+### Monitor Controller Setups (screenshots)
+- verschiedene setups ändern kanalrouting (dante digiface schickt an monitor controller, der routet audio ans andioamo)
+### samplerate (alles 48000)
+
+## ton kommt am falschen ort raus
+### mischpultgain nur für große lautsprecher (gain ganz unten, kanäle 1-4 ganz hoch, 4 outputs ganz hoch, so haben große lautsprecher gleiche lautstärke wie kleine lautsprecher, eq, panorama, routing), patchbay, 
+### 
+
+
+## mikrofon inpupt
+### phantomspeisung, vorverstärker, patchbay? 
+### routing. 
 
 
 
