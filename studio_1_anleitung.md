@@ -30,10 +30,10 @@ Zusätzlich gibt es optionale Treiber, um das Digiface auch als Netzwerkswitch z
 
 - RTW TC5 Monitor Controller - Verbunden mit dem DANTE Netzwerk (mit Strom über PoE)
 - RME Digiface DANTE - USB Anschlusskabel 
-- ElGato TB2 Dock - MacPro Serverraum
+- ElGato TB2 Dock - MacStudio Serverraum
 - Kensington TB3/USB-C Dock - Eigene TB3 Apple Rechner (Strom, Maus, Tastatur, Video und DANTE-Netzwerk)
 - KVM Switch (Keyboard, Video, Mouse) - Bild, Maus und Tastatur Auswahl zwischen:
-	- PC1: MacPro Serverraum
+	- PC1: MacStudio Serverraum
 	- PC2: Kensington TB3/USB-C Dock (Apple Rechner)
 	- PC3: Einzelne USB und HDMI Anschlüsse (WIN Rechner)
 - Netzwerk Switch ins DANTE-Netzwerk (Nicht mit ICEM Netzwerk oder Internet verbunden)
@@ -86,17 +86,17 @@ Andere LINE-Analogsignale können direkt über das XLR-Breakout und die Steckfel
 
 Studio 1 ist für verschiedene Abhör-Szenarien konzipiert:
 
-- Mono bis 20.1 Mehrkanal (DANTE) über Digiface mit eigenem Rechner oder MacPro
-- Mono bis 20.1 Mehrkanal (DANTE) über Dante Virtual Soundcard mit eigenem Rechner, MacPro (Serverraum) oder AstroSpatial Rechner (Serverraum), oder ein anderes externes Gerät (z. B. LINUX Rechner über das Soundcraft Pult).
+- Mono bis 20.1 Mehrkanal (DANTE) über Digiface mit eigenem Rechner oder MacStudio
+- Mono bis 20.1 Mehrkanal (DANTE) über Dante Virtual Soundcard mit eigenem Rechner, MacStudio (Serverraum) oder AstroSpatial Rechner (Serverraum), oder ein anderes externes Gerät (z. B. LINUX Rechner über das Soundcraft Pult).
 - Arbeiten mit eigenen Rechnern am großen Tisch am Fenster (RME FIREFACE UC oder Miniklinke).
 
 *WICHTIG:* Die Dante Virtual Soundcard (DVS) und das Digiface Dante von RME erfüllen dieselbe Funktion. Die Verwendung des Digiface anstelle von DVS bietet zahlreiche Vorteile und entlastet den Computer erheblich. Es sollte entweder das eine oder das andere verwendet werden und nicht beide gleichzeitig. Anders ausgedrückt: Wenn das Digiface genutzt werden soll, ist das Starten von DVS nicht erforderlich (oder empfohlen).
 
 ### RME DigifaceDANTE und TotalMix
 
-Zentral für das Arbeiten am Arbeitsplatz ist das RME DigifaceDANTE USB Interface am Tisch, das über USB3 angeschlossen wird (ein Kabel mit USB-A und USB-C Anschlüssen liegt am Tisch). Es fungiert als Schnittstelle zwischen den eigenen Rechnern und dem DANTE Netzwerk. Weitere Informationen findet man [hier](LINK AUF DIGIFACE). TODO Link
+Zentral für das Arbeiten am Arbeitsplatz ist das RME DigifaceDANTE USB Interface am Tisch, das über USB3 angeschlossen wird (ein Kabel mit USB-A und USB-C Anschlüssen liegt am Tisch). Es fungiert als Schnittstelle zwischen den eigenen Rechnern und dem DANTE Netzwerk. Weitere Informationen findet man [hier](https://rme-audio.de/de_digiface-usb.html).
 
-Das Routing im DIGIFACE wird durch die Software TotalMix gesteuert. Das Standard-Preset, oder WORKSPACE benannt kann [hier](LINK AUF DOWNLOADS) gefunden werden, und weitere Informationen zu TotalMix sind [hier](https://rme-audio.de/de_totalmix-fx.html) verfügbar.  TODO Link
+Das Routing im DIGIFACE wird durch die Software TotalMix gesteuert. Das Standard-Preset, oder WORKSPACE benannt kann [hier](https://github.com/Folkwang-ICEM/reaper/tree/main/Studio-1-Vorlagen-TotalMix-Dante) gefunden werden, und weitere Informationen zu TotalMix sind [hier](https://rme-audio.de/de_totalmix-fx.html) verfügbar.
 
 **Das Routing im TotalMix ist standardmäßig wie folgt:**
 
@@ -107,7 +107,7 @@ SOFTWARE PLAYBACK 2 —> HARDWARE OUTPUT 2
 SOFTWARE PLAYBACK 3 —> HARDWARE OUTPUT 4
 Usw.
 
-Zusätzlich werden die Eingänge 41 bis 64 in die Ausgänge 1 bis 24 geleitet, um externe Geräte (wie das Soundcraft Pult für LINUX Nutzer) oder DVS-Rechner (wie den MacPro oder Astrospatial im Serverraum) anzuschließen.
+Zusätzlich werden die Eingänge 41 bis 64 in die Ausgänge 1 bis 24 geleitet, um externe Geräte (wie das Soundcraft Pult für LINUX Nutzer) oder DVS-Rechner (wie den MacStudio oder Astrospatial im Serverraum) anzuschließen.
 
 HARDWARE INPUT 41 —> HARDWARE OUTPUT 1
 HARDWARE INPUT 42 —> HARDWARE OUTPUT 2
@@ -123,41 +123,41 @@ S1 Backup: Ein Backup von S1 Reset falls man es aus Versehen überschreibt.
 
 ### Wandler
 Die Wandlung zwischen dem DANTE Netzwerk und der analogen Welt erfolgt über das ANDIAMO von Direct Out und/oder das RedNet MP8R von Focusrite. Beide Geräte befinden sich im Rack und sind bereits in das DANTE Netzwerk integriert.
-- Das ANDIAMO ist ein 32-Kanal-Line-AD/DA-Wandler (Analog-zu-Digital/Digital-zu-Analog). Weitere Informationen findet man [hier](LINK AUF ANDIAMO). TODO Link
-- Das REDNET MP8R ist ein 8-Kanal-Mikrofonvorverstärker und AD-Wandler. Weitere Informationen findet man [hier](LINK AUF REDNET). TODO Link
+- Das ANDIAMO ist ein 32-Kanal-Line-AD/DA-Wandler (Analog-zu-Digital/Digital-zu-Analog). Weitere Informationen findet man [hier](https://www.directout.eu/de/product/andiamo/).
+- Das REDNET MP8R ist ein 8-Kanal-Mikrofonvorverstärker und AD-Wandler. Weitere Informationen findet man [hier](https://focusrite.com/products/rednet-mp8r). 
 
 ### Dante Controller
 
-Die digitalen Signale aus den Wandlern werden mittels des Dante Controller auf das DigifaceDANTE geroutet. Das Preset für den Dante Controller kann [hier](LINK AUF DOWNLOADS) heruntergeladen werden. Das Laden des Presets im Dante Controller setzt alles zurück auf das Standard-Setup, falls etwas verstellt wurde. TODO Link
+Die digitalen Signale aus den Wandlern werden mittels des Dante Controller auf das DigifaceDANTE geroutet. Das Preset für den Dante Controller kann [hier](https://github.com/Folkwang-ICEM/reaper/tree/main/Studio-1-Vorlagen-TotalMix-Dante) heruntergeladen werden. Das Laden des Presets im Dante Controller setzt alles zurück auf das Standard-Setup, falls etwas verstellt wurde.
 
 **Das Routing im Dante Controller ist Standardmäßig wie folgt:** 
 
 ANDIAMO TRANSMITTER (OUT) 1 - 32 —> DIGIFACE RECEIVER (IN) 1 - 32
 REDNET MP8R TRANSMITTER (OUT) 1 - 8 —> DIGIFACE RECEIVER (IN) 33 - 40
 
-ANDIAMO TRANSMITTER (OUT) 1 - 32 —> MACPRO (DVS) RECEIVER (IN) 1 - 24
-REDNET MP8R TRANSMITTER (OUT) 1 - 8 —> MACPRO (DVS) RECEIVER (IN) 25 - 32
+ANDIAMO TRANSMITTER (OUT) 1 - 32 —> MACSTUDIO (DVS) RECEIVER (IN) 1 - 24
+REDNET MP8R TRANSMITTER (OUT) 1 - 8 —> MACSTUDIO (DVS) RECEIVER (IN) 25 - 32
 
-MACPRO (DVS) TRANSMITTER (OUT) 1 -24 —> DIGIFACE RECEIVER (IN) 41 - 64
+MACSTUDIO (DVS) TRANSMITTER (OUT) 1 -24 —> DIGIFACE RECEIVER (IN) 41 - 64
 
 DIGIFACE TRANSMITTER (OUT) 1 - 24 —> RTW TC5 RECEIVER (IN) 1 - 24
 DIGIFACE TRANSMITTER (OUT) 25 - 33 —> ANDIAMO RECEIVER (IN) 25 - 33
 
 RTW TC5 TRANSMITTER (OUT) 1 - 24 —> ANDIAMO RECEIVER (IN) 1 - 24
 
-(BILD DANTE CONTROLLER)
+(BILD DANTE CONTROLLER) TODO
 
 **Dieses Routing sollte nicht verändert, oder nach jeder Änderung für den nächsten Nutzer zurückgesetzt werden!**
 
 ### RTW TouchControl 5
 
-Der RTW TouchControl 5 (TC5) steuert die Lautstärke, das Monitoring und das Bassmanagement für alle Lautsprecher im DOME (20.1). Um die Lautstärke der Lautsprecher 1-4 an alle anderen anzupassen, muss das MACKIE PULT (am Fenster) wie [hier](#mackie-mischpult-lautsprecher-14-und-lr) beschrieben eingerichtet werden. Weitere Informationen zum TC5 findet man [hier](LINK AUF TC5) und zum Lautsprecher-Setup [hier](LINK AUF LS SETUP). TODO Links
+Der RTW TouchControl 5 (TC5) steuert die Lautstärke, das Monitoring und das Bassmanagement für alle Lautsprecher im DOME (20.1). Um die Lautstärke der Lautsprecher 1-4 an alle anderen anzupassen, muss das MACKIE PULT (am Fenster) wie [hier](#mackie-mischpult-lautsprecher-1-4-und-lr) beschrieben eingerichtet werden. Weitere Informationen zum TC5 findet man [hier](https://www.rtw.com/de/produkte-gelistet/audio-monitore/touchcontrol-5.html) und zum Lautsprecher-Setup [hier](#lautsprecher-setup).
 
 # Routings für die meisten Anwendungsfälle
 
 ## Einen Studio-PC oder den eigenen Rechner anschließen
 
-### Mono bis 20.1 Mehrkanal (DANTE) über Digiface mit eigenem Rechner oder MacPro
+### Mono bis 20.1 Mehrkanal (DANTE) über Digiface mit eigenem Rechner oder MacStudio
 
 Benötigte Software/Treiber: Die erforderliche Software und Treiber umfassen RME Treiber und Software, REDNET Steuerungssoftware sowie den Dante Controller.
 
@@ -173,22 +173,19 @@ An den eigenen Rechner muss folgendes angeschlossen werden:
 - Netzwerk (Adapter auf USB-C liegt dabei, Kabel mit Grüne Beschriftung)
 - Strom, wenn gewünscht.
 
+**Linux Rechner**
+Das Soundcraft Pult ist aktuell das einzige DANTE fähige Gerät, das class compliant ist. Ein Linux Rechner kann an das Pult angeschlossen werden. Dieses muss dann über den Dante Controller entsprechend geroutet werden.
+
 **MacStudio (Serverraum)**
 - DigifaceDANTE (USB-C Kabel mit weißer Beschriftung) an den passenden Dock anschliessen
 - KVM Switch auf PC1 setzen
 
-### Mono bis 20.1 Mehrkanal (DANTE) über Dante Virtual Soundcard (DVS) mit eigenem Rechner, MacPro (Serverraum) oder AstroSpatial Rechner (Serverraum), oder ein anderes externes Gerät (z. B. LINUX Rechner über das Soundcraft Pult).
-
-TODO braucht es diesen Abschnitt?? dann mehr info zum Anschließen
-
-WICHTIG: Obwohl das Digiface nicht als Schnittstelle zwischen dem Rechner und dem Dante Netzwerk fungiert, werden die Signale über das Digiface  trotzdem geleitet. Es agiert wie eine Matrix, die die Signale aus DVS oder dem externen Gerät in den Monitor Controller TC5 und Andiamo weiterleitet. Dies ist zwar nicht zwingend notwendig, vereinfacht jedoch deutlich das Routing im Dante-System.
-
 ## Tafel Stereo
 ### mobiler Arbeitsplatz
 
-- Laptop wie [hier](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macpro) beschrieben anschließen.
+- Laptop wie [hier](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macstudio) beschrieben anschließen.
 - Audio auf Kanäle 1-2 des Digiface schicken (TODO genauere Namen).
-- Lautstärke am [Mischpult](#mackie-mischpult-lautsprecher-14-und-lr) regeln.
+- Lautstärke am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) regeln.
 ![Diagramm Laptop -> Stereo](/graph/laptop-stereo.png)
 
 ### Arbeitsplatz großer Tisch
