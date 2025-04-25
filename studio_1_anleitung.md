@@ -163,21 +163,21 @@ Benötigte Software/Treiber: Die erforderliche Software und Treiber umfassen RME
 An den eigenen Rechner muss folgendes angeschlossen werden: 
 
 **Für Apple Rechner mit Thunderbolt 3 oder neuer:**
-- DigifaceDANTE (USB-C Kabel mit weißer Beschriftung)
-- TB3 Dock (Thunderbolt/USB-C Kabel mit Rote Beschriftung) für Strom, Dante Netzwerk, und KVM Switch. **KVM Switch auf PC2 setzten**
+- DigifaceDANTE (USB-C Kabel mit weißer Beschriftung, kann direkt in den grün markierten KVM Switch gesteckt werden)
+- TB3 Dock (Thunderbolt/USB-C Kabel mit roter Beschriftung) für Strom, Dante Netzwerk, und KVM Switch. **KVM Switch auf PC1 setzten**
 
 **Windows Rechner oder ältere Apple Rechner:**
-- DigifaceDANTE (USB-C/USB-A Kabel mit weißer Beschriftung)
-- USB, HDMI (Alle Kabel mit Grüne Beschriftung) die mit den KVM Switch verbunden sind. **KVM Switch auf PC3 setzen.**
-- Netzwerk (Adapter auf USB-C liegt dabei, Kabel mit Grüne Beschriftung)
+- DigifaceDANTE (USB-C Kabel mit weißer Beschriftung, kann direkt in den grün markierten KVM Switch gesteckt werden)
+- USB, HDMI (Alle Kabel mit grüner Beschriftung) die mit den KVM Switch verbunden sind. **KVM Switch auf PC2 setzen.**
+- Netzwerk (Adapter auf USB-C liegt dabei, Kabel mit grüner Beschriftung)
 - Strom, wenn gewünscht.
 
 **Linux Rechner**
 Das Soundcraft Pult ist aktuell das einzige DANTE fähige Gerät, das class compliant ist. Ein Linux Rechner kann an das Pult angeschlossen werden. Dieses muss dann über den Dante Controller entsprechend geroutet werden.
 
 **MacStudio (Serverraum)**
-- DigifaceDANTE (USB-C Kabel mit weißer Beschriftung) an den passenden Dock anschliessen
-- KVM Switch auf PC1 setzen
+- DigifaceDANTE (USB-C Kabel mit weißer Beschriftung, kann direkt in den grün markierten KVM Switch gesteckt werden)
+- KVM Switch auf PC3 setzen
 
 ## Tafel Stereo
 ### mobiler Arbeitsplatz
@@ -185,6 +185,7 @@ Das Soundcraft Pult ist aktuell das einzige DANTE fähige Gerät, das class comp
 - Laptop wie [hier](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macstudio) beschrieben anschließen.
 - Audio auf die ersten zwei Kanäle (Dante 1+2) des Digiface schicken.
 - Am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) die ersten zwei Kanäle über die Knöpfe und Panorama auf LR schicken. Über die Fader und "Main Mix", sowie den RTW TouchControl die Lautstärke regeln.
+- Der RTW TouchControl muss auf das 20.1 Preset gestellt sein (unten rechts auswählbar).
 
 ![Diagramm Laptop -> Stereo](/graph/laptop-stereo.png)
 
@@ -197,9 +198,10 @@ Das Soundcraft Pult ist aktuell das einzige DANTE fähige Gerät, das class comp
 
 ## Lautsprecher 1-4
 ### mobiler Arbeitsplatz
-- Laptop wie [hier](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macstudio) beschrieben anschließen.
+- Rechner wie [hier](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macstudio) beschrieben anschließen.
 - Audio auf die ersten vier Kanäle (Dante 1-4) des Digiface schicken.
 - Am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) die ersten vier Kanäle über die Knöpfe und Panorama Regler auf 1-2, bzw. 3-4 schicken. Über die Fader und "Main Mix", sowie den RTW TouchControl die Lautstärke regeln.
+- Der RTW TouchControl muss auf das 20.1 Preset gestellt sein (unten rechts auswählbar).
 
 ### Arbeitsplatz großer Tisch
 - RME Fireface am Tiscch über USB Kabel anschließen (benötigt RME Treiber). Ein Doppelklick auf den Drehknopf schaltet das Interface zwischen Mac und Windows um (dabei darf das Gerät nicht angeschlossen sein).
@@ -208,10 +210,17 @@ Das Soundcraft Pult ist aktuell das einzige DANTE fähige Gerät, das class comp
 
 ## DOME
 ### mobiler Arbeitsplatz
+- Rechner wie [hier](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macstudio) beschrieben anschließen.
+- Audio auf die gewünschten Kanäle (Dante 1-21) des Digiface schicken.
+- Welchen Lautsprechern diese Kanäle entsprechen, hängt vom Preset im RTW TouchControl ab. Das 20.1 Preset (unten rechts auswählbar) entspricht der [ICEM-Norm](#lautsprecher-setup).
+- Das [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) muss wie [oben](#mackie-mischpult-lautsprecher-1-4-und-lr) beschrieben eingestellt sein, damit Lautsprecher 1-4 gleich laut sind wie 5-20.
+- Über den RTW TouchControl kann die Lautstärke geregelt werden.
 
 ## Aufnahme
 ### mobiler Arbeitsplatz
+- mikro - breakout - preamp - automatisch auf andiamo 1-8 -> digiface In 1-8
 ### Arbeitsplatz großer Tisch
+- mikro - breakout - preamp - an der patchbay Preamp Out ind RME In stecken.
 
 
 # Lautsprecher Setup
@@ -229,6 +238,9 @@ Sowohl das RME Digiface als auch der RTW TouchControl verfügen über einen Kopf
 
 
 # Troubleshooting
+
+## Interface will nicht
+Stecken alle Verbindungen wie [hier](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macstudio) beschrieben?
 
 ## Ich habe keinen Ton - woran kann es liegen?
 ### totalmix nicht anfassen aber kann zu problemen führen.
@@ -250,3 +262,7 @@ Sowohl das RME Digiface als auch der RTW TouchControl verfügen über einen Kopf
 
 
 
+
+
+
+TODO Diagramm Bild Sub
