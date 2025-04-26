@@ -44,7 +44,7 @@ Zusätzlich gibt es optionale Treiber, um das Digiface auch als Netzwerkswitch z
 
 # Setup
 
-![Diagramm Laptop -> Stereo](/graph/draw.io/gesamt.png)
+![Diagramm Laptop -> Stereo](/graph/drawio/gesamt.png)
 
 ## ANALOG (schwarze Pfeile im Diagramm)
 
@@ -187,14 +187,14 @@ Das Soundcraft Pult ist aktuell das einzige DANTE fähige Gerät, das class comp
 - Am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) die ersten zwei Kanäle über die Knöpfe und Panorama auf LR schicken. Über die Fader und "Main Mix", sowie den RTW TouchControl die Lautstärke regeln.
 - Der RTW TouchControl muss auf das 20.1 Preset gestellt sein (unten rechts auswählbar).
 
-![Diagramm Laptop -> Stereo](/graph/draw.io/dante-tafel.png)
+![Diagramm Laptop -> Stereo](/graph/drawio/dante-tafel.png)
 
 ### Arbeitsplatz großer Tisch
 - RME Fireface am Tiscch über USB Kabel anschließen (benötigt RME Treiber). Ein Doppelklick auf den Drehknopf schaltet das Interface zwischen Mac und Windows um (dabei darf das Gerät nicht angeschlossen sein).
 - Audio auf die ersten zwei Kanäle (AN 1+2) schicken.
 - Am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) die entsprechenden mit "RME FIREFACE" markierten Kanäle über die Knöpfe und Panorama auf LR schicken. Über die Fader und "Main Mix" die Lautstärke regeln.
 
-![Diagramm Laptop -> Stereo](/graph/draw.io/no-dante-tafel.png)
+![Diagramm Laptop -> Stereo](/graph/drawio/no-dante-tafel.svg)
 
 ## Lautsprecher 1-4
 ### mobiler Arbeitsplatz
