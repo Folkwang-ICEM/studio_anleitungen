@@ -203,10 +203,14 @@ Das Soundcraft Pult ist aktuell das einzige DANTE fähige Gerät, das class comp
 - Am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) die ersten vier Kanäle über die Knöpfe und Panorama Regler auf 1-2, bzw. 3-4 schicken. Über die Fader und "Main Mix", sowie den RTW TouchControl die Lautstärke regeln.
 - Der RTW TouchControl muss auf das 20.1 Preset gestellt sein (unten rechts auswählbar).
 
+![Diagramm Laptop -> Quad](/graph/drawio/dante-quad.drawio.svg)
+
 ### Arbeitsplatz großer Tisch
 - RME Fireface am Tiscch über USB Kabel anschließen (benötigt RME Treiber). Ein Doppelklick auf den Drehknopf schaltet das Interface zwischen Mac und Windows um (dabei darf das Gerät nicht angeschlossen sein).
 - Audio auf die ersten vier Kanäle (AN 1-4) schicken.
 - Am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) die entsprechenden mit "RME FIREFACE" markierten Kanäle über die Knöpfe und Panorama Regler auf 1-2, bzw. 3-4 schicken. Über die Fader und "LS 1-4" die Lautstärke regeln.
+
+![Diagramm Laptop -> Quad](/graph/drawio/no-dante-quad.drawio.svg)
 
 ## DOME
 ### mobiler Arbeitsplatz
@@ -216,11 +220,22 @@ Das Soundcraft Pult ist aktuell das einzige DANTE fähige Gerät, das class comp
 - Das [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) muss wie [oben](#mackie-mischpult-lautsprecher-1-4-und-lr) beschrieben eingestellt sein, damit Lautsprecher 1-4 gleich laut sind wie 5-20.
 - Über den RTW TouchControl kann die Lautstärke geregelt werden.
 
+![Diagramm Laptop -> Dome](/graph/drawio/no-dante-dome.drawio.svg)
+
 ## Aufnahme
 ### mobiler Arbeitsplatz
-- mikro - breakout - preamp - automatisch auf andiamo 1-8 -> digiface In 1-8
+TODO: Breakouts normalisiert?
+- Mikrofone über XLR mit den XLT Breakouts verbinden.
+- Breakouts übers Steckfeld auf Preamp routen.
+- Die Ausgänge des Preamps gehen automatisch auf die Eingänge 1-8 des Andiamo, welche als In 1-8 am Digiface anliegen.
+![Diagramm Mikro -> Dante](/graph/drawio/mikro-dante.drawio.svg)
+
 ### Arbeitsplatz großer Tisch
-- mikro - breakout - preamp - an der patchbay Preamp Out ind RME In stecken.
+TODO: Breakouts normalisiert?
+- Mikrofone über XLR mit den XLT Breakouts verbinden.
+- Breakouts übers Steckfeld auf Preamp routen.
+- Die Ausgänge des Preamps müssen auf die Eingänge des RMEs geroutet werden.
+![Diagramm Mikro -> Dante](/graph/drawio/mikro-no-dante.drawio.svg)
 
 
 # Lautsprecher Setup
@@ -232,6 +247,7 @@ Die Lautsprecherkonstellation bleibt erstmal nach der inoffizielle ICEM-Norm bes
 - Lautsprecher 13-20: Genelec 8040 untere Ring, vorne links ist 13
 - Lautsprecher 21: Genelec 1092 Subwoofer
 
+
 # Kopfhörer monitoring
 
 Sowohl das RME Digiface als auch der RTW TouchControl verfügen über einen Kopfhörer Ausgang. Für das Digiface kann über TotalMix bestimmt werden, was auf den Koopfhörer Ausgang geschickt wird. Der RTW TouchControl schickt eine Stereosumme auf die Kopfhörer. Aufwendigere Setups sind aktuell nicht so einfach umzusetzen. Über die Breakouts an der Patchbay können natürlich auch Kopfhörerverstärker betrieben werden. Um Hardware und Unterstützung für so ein Vorhaben zu erhalten, sollte es rechtzeitig angekündigt werden.
@@ -241,6 +257,7 @@ Sowohl das RME Digiface als auch der RTW TouchControl verfügen über einen Kopf
 
 ## Interface will nicht
 Stecken alle Verbindungen wie [hier](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macstudio) beschrieben?
+- Arbeitsplatz Tisch: Steckfelder prüfen (sind nicht alle normalisiert!)
 
 ## Ich habe keinen Ton - woran kann es liegen?
 ### totalmix nicht anfassen aber kann zu problemen führen.
