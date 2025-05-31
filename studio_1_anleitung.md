@@ -220,7 +220,7 @@ Das Soundcraft Pult ist aktuell das einzige DANTE fähige Gerät, das class comp
 - Das [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) muss wie [oben](#mackie-mischpult-lautsprecher-1-4-und-lr) beschrieben eingestellt sein, damit Lautsprecher 1-4 gleich laut sind wie 5-20.
 - Über den RTW TouchControl kann die Lautstärke geregelt werden.
 
-![Diagramm Laptop -> Dome](/graph/drawio/no-dante-dome.drawio.svg)
+![Diagramm Laptop -> Dome](/graph/drawio/dante-dome.drawio.svg)
 
 ## Aufnahme
 ### mobiler Arbeitsplatz
@@ -228,6 +228,7 @@ TODO: Breakouts normalisiert?
 - Mikrofone über XLR mit den XLT Breakouts verbinden.
 - Breakouts übers Steckfeld auf Preamp routen.
 - Die Ausgänge des Preamps gehen automatisch auf die Eingänge 1-8 des Andiamo, welche als In 1-8 am Digiface anliegen.
+
 ![Diagramm Mikro -> Dante](/graph/drawio/mikro-dante.drawio.svg)
 
 ### Arbeitsplatz großer Tisch
@@ -235,6 +236,7 @@ TODO: Breakouts normalisiert?
 - Mikrofone über XLR mit den XLT Breakouts verbinden.
 - Breakouts übers Steckfeld auf Preamp routen.
 - Die Ausgänge des Preamps müssen auf die Eingänge des RMEs geroutet werden.
+
 ![Diagramm Mikro -> Dante](/graph/drawio/mikro-no-dante.drawio.svg)
 
 
