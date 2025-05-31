@@ -225,16 +225,18 @@ Das Soundcraft Pult ist aktuell das einzige DANTE fähige Gerät, das class comp
 ## Aufnahme
 ### mobiler Arbeitsplatz
 TODO: Breakouts normalisiert?
-- Mikrofone über XLR mit den XLT Breakouts verbinden.
+- Mikrofone über XLR mit den XLR Breakouts verbinden.
 - Breakouts übers Steckfeld auf Preamp routen.
+- Am Preamp pegeln und ggf. Phantomspeisung für die jeweiligen Kanäle einschalten.
 - Die Ausgänge des Preamps gehen automatisch auf die Eingänge 1-8 des Andiamo, welche als In 1-8 am Digiface anliegen.
 
 ![Diagramm Mikro -> Dante](/graph/drawio/mikro-dante.drawio.svg)
 
 ### Arbeitsplatz großer Tisch
 TODO: Breakouts normalisiert?
-- Mikrofone über XLR mit den XLT Breakouts verbinden.
+- Mikrofone über XLR mit den XLR Breakouts verbinden.
 - Breakouts übers Steckfeld auf Preamp routen.
+- Am Preamp pegeln und ggf. Phantomspeisung für die jeweiligen Kanäle einschalten.
 - Die Ausgänge des Preamps müssen auf die Eingänge des RMEs geroutet werden.
 
 ![Diagramm Mikro -> Dante](/graph/drawio/mikro-no-dante.drawio.svg)
@@ -278,10 +280,3 @@ Stecken alle Verbindungen wie [hier](#mono-bis-201-mehrkanal-dante-über-digifac
 ## mikrofon inpupt
 ### phantomspeisung, vorverstärker, patchbay? 
 ### routing. 
-
-
-
-
-
-
-TODO Diagramm Bild Sub
