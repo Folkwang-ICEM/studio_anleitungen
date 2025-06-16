@@ -259,24 +259,44 @@ Sowohl das RME Digiface als auch der RTW TouchControl verfügen über einen Kopf
 
 # Troubleshooting
 
-## Interface will nicht
-Stecken alle Verbindungen wie [hier](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macstudio) beschrieben?
-- Arbeitsplatz Tisch: Steckfelder prüfen (sind nicht alle normalisiert!)
+## Das Interface wird nicht erkannt
+- Stecken alle Verbindungen wie [hier](#mono-bis-201-mehrkanal-dante-über-digiface-mit-eigenem-rechner-oder-macstudio) beschrieben?
+- Sind alle nötigen Treiber installiert?
+- Für das Arbeiten am großen Tisch: Ist das Interface auf PC (für Window) oder AP (für Mac) gestellt? Umstellen über Doppelklick auf den Drehknopf
 
-## Ich habe keinen Ton - woran kann es liegen?
-### totalmix nicht anfassen aber kann zu problemen führen.
-### Dante controller sollte nicht angefasst werden, aber kann zu problemen führen. 
-### mischpult gemutet, fader runtter oder falsch geroutet, falscher gain
-### patchbay checken
-### Monitor Controller Setups (screenshots)
-- verschiedene setups ändern kanalrouting (dante digiface schickt an monitor controller, der routet audio ans andioamo)
-### samplerate (alles 48000)
+## Ich habe keinen Ton
+### Mischpult
+- Sind Kanäle gemutet, die Fader nicht richtig eingestellt oder falsch (gar nicht) geroutet? Stimmt der Gain-Regler? Siehe [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr).
 
-## ton kommt am falschen ort raus
-### mischpultgain nur für große lautsprecher (gain ganz unten, kanäle 1-4 ganz hoch, 4 outputs ganz hoch, so haben große lautsprecher gleiche lautstärke wie kleine lautsprecher, eq, panorama, routing), patchbay, 
-### 
+### Steckfeld
+- Stecken alle nötigen Verbindungen am Steckfeld? (Verbindungen vom Arbeitsplatz am großen Tisch sind nicht normalisiert!)
 
+### Monitor Controller Setups
+- Ist Lautstärke richtig eingestellt? 
+- Ist das richtige Setup am Monitor Controller gewählt? Die Setups können die Kanalreihenfolge beeinflussen, da alle Signale vom Digiface an den Controller und von dort ans Andiamo geroutet werden.
+TODO screenshots
+ 
+### Totalmix
+Einstellungen im Totalmix sollten nicht selbständig vorgenommen werden! Trotzdem kann eine falsche Einstellung zu unerwünschten Ergebnissen führen und sollte kontrolliert werden.
+TODO Presets?
 
-## mikrofon inpupt
-### phantomspeisung, vorverstärker, patchbay? 
-### routing. 
+### Dante Controller
+Einstellungen im Dante Controller sollten nicht selbstständig vorgenommen werden! Hier können alle Danteverbindungen kopntrolliert und verändert werden, falsche Einstellungen können also zu Problemen führen.
+TODO Presets?
+ 
+## Ton aus dem falschen Lautsprecher
+- Routing der großen Lautsprecher und Tafellautsprecher am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) überprüfen.
+- Routing am Steckfeld überprüfen.
+- Setup am Monitor Controller überprüfen
+- Zuletzt Routing im TotalMix und Dante Controller überprüfen. (diese Einstellungen sollten nicht verändert werden, können aber über ein TODO Preset wiederhergestellt werden.)
+
+## Es gibt Aussetzer oder Verzerrung
+- stimmt die Samplingrate aller Geräte überein? In den Studios sollten grundsätzlich alle Geräte auf 48000Hz eingestellt sein!
+
+## Kein Mikrofon inpupt
+### Verstärkung
+- benötigen die Mikrofone Phantomspeisung? Ist diese am Vorverstärker oder ggf. am Interface eingeschaltet?
+- Ist die Verstärkung (Gain) am Vorverstärker oder ggf. am Interface richtig eingestellt?
+
+### Routing
+- Das Routing sollte überprüft werden, beispielsweise wie [hier](#Aufnahme) beschrieben.
