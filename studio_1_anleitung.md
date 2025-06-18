@@ -190,7 +190,7 @@ Das Soundcraft Pult ist aktuell das einzige DANTE fähige Gerät, das class comp
 ![Diagramm Laptop -> Stereo](/graph/drawio/dante-tafel.drawio.svg)
 
 ### Arbeitsplatz großer Tisch
-- RME Fireface am Tiscch über USB Kabel anschließen (benötigt RME Treiber). Ein Doppelklick auf den Drehknopf schaltet das Interface zwischen Mac und Windows um (dabei darf das Gerät nicht angeschlossen sein).
+- RME Fireface am Tisch über USB Kabel anschließen (benötigt RME Treiber). Ein Doppelklick auf den Drehknopf schaltet das Interface zwischen Mac und Windows um (dabei darf das Gerät nicht angeschlossen sein).
 - Audio auf die ersten zwei Kanäle (AN 1+2) schicken.
 - Am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) die entsprechenden mit "RME FIREFACE" markierten Kanäle über die Knöpfe und Panorama auf LR schicken. Über die Fader und "Main Mix" die Lautstärke regeln.
 
@@ -206,7 +206,7 @@ Das Soundcraft Pult ist aktuell das einzige DANTE fähige Gerät, das class comp
 ![Diagramm Laptop -> Quad](/graph/drawio/dante-quad.drawio.svg)
 
 ### Arbeitsplatz großer Tisch
-- RME Fireface am Tiscch über USB Kabel anschließen (benötigt RME Treiber). Ein Doppelklick auf den Drehknopf schaltet das Interface zwischen Mac und Windows um (dabei darf das Gerät nicht angeschlossen sein).
+- RME Fireface am Tisch über USB Kabel anschließen (benötigt RME Treiber). Ein Doppelklick auf den Drehknopf schaltet das Interface zwischen Mac und Windows um (dabei darf das Gerät nicht angeschlossen sein).
 - Audio auf die ersten vier Kanäle (AN 1-4) schicken.
 - Am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) die entsprechenden mit "RME FIREFACE" markierten Kanäle über die Knöpfe und Panorama Regler auf 1-2, bzw. 3-4 schicken. Über die Fader und "LS 1-4" die Lautstärke regeln.
 
@@ -224,7 +224,6 @@ Das Soundcraft Pult ist aktuell das einzige DANTE fähige Gerät, das class comp
 
 ## Aufnahme
 ### mobiler Arbeitsplatz
-TODO: Breakouts normalisiert?
 - Mikrofone über XLR mit den XLR Breakouts verbinden.
 - Breakouts übers Steckfeld auf Preamp routen.
 - Am Preamp pegeln und ggf. Phantomspeisung für die jeweiligen Kanäle einschalten.
@@ -233,7 +232,6 @@ TODO: Breakouts normalisiert?
 ![Diagramm Mikro -> Dante](/graph/drawio/mikro-dante.drawio.svg)
 
 ### Arbeitsplatz großer Tisch
-TODO: Breakouts normalisiert?
 - Mikrofone über XLR mit den XLR Breakouts verbinden.
 - Breakouts übers Steckfeld auf Preamp routen.
 - Am Preamp pegeln und ggf. Phantomspeisung für die jeweiligen Kanäle einschalten.
@@ -277,18 +275,16 @@ Sowohl das RME Digiface als auch der RTW TouchControl verfügen über einen Kopf
 TODO screenshots
  
 ### Totalmix
-Einstellungen im Totalmix sollten nicht selbständig vorgenommen werden! Trotzdem kann eine falsche Einstellung zu unerwünschten Ergebnissen führen und sollte kontrolliert werden.
-TODO Presets?
+Einstellungen im Totalmix sollten nicht selbständig vorgenommen werden! Trotzdem kann eine falsche Einstellung zu unerwünschten Ergebnissen führen und sollte kontrolliert werden. Die Presets für Totalmix und den Dante Controller können [hier](https://icem-www.folkwang-uni.de/icem-web/wp-content/uploads/2024/05/Studio-1-Vorlagen-TotalMix-Dante.zip) heruntergeladen werden.
 
 ### Dante Controller
-Einstellungen im Dante Controller sollten nicht selbstständig vorgenommen werden! Hier können alle Danteverbindungen kopntrolliert und verändert werden, falsche Einstellungen können also zu Problemen führen.
-TODO Presets?
+Einstellungen im Dante Controller sollten nicht selbstständig vorgenommen werden! Hier können alle Danteverbindungen kopntrolliert und verändert werden, falsche Einstellungen können also zu Problemen führen. Die Presets für Totalmix und den Dante Controller können [hier](https://icem-www.folkwang-uni.de/icem-web/wp-content/uploads/2024/05/Studio-1-Vorlagen-TotalMix-Dante.zip) heruntergeladen werden.
  
 ## Ton aus dem falschen Lautsprecher
 - Routing der großen Lautsprecher und Tafellautsprecher am [Mischpult](#mackie-mischpult-lautsprecher-1-4-und-lr) überprüfen.
 - Routing am Steckfeld überprüfen.
 - Setup am Monitor Controller überprüfen
-- Zuletzt Routing im TotalMix und Dante Controller überprüfen. (diese Einstellungen sollten nicht verändert werden, können aber über ein TODO Preset wiederhergestellt werden.)
+- Zuletzt Routing im TotalMix und Dante Controller überprüfen. (diese Einstellungen sollten nicht verändert werden, können aber über ein [Preset](https://icem-www.folkwang-uni.de/icem-web/wp-content/uploads/2024/05/Studio-1-Vorlagen-TotalMix-Dante.zip) wiederhergestellt werden.)
 
 ## Es gibt Aussetzer oder Verzerrung
 - stimmt die Samplingrate aller Geräte überein? In den Studios sollten grundsätzlich alle Geräte auf 48000Hz eingestellt sein!
