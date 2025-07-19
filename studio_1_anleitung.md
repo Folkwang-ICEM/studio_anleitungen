@@ -150,7 +150,34 @@ Die digitalen Signale aus den Wandlern werden mittels des Dante Controller auf d
 
 ### RTW TouchControl 5
 
-Der RTW TouchControl 5 (TC5) steuert die Lautstärke, das Monitoring und das Bassmanagement für alle Lautsprecher im DOME (20.1). Um die Lautstärke der Lautsprecher 1-4 an alle anderen anzupassen, muss das MACKIE PULT (am Fenster) wie [hier](#mackie-mischpult-lautsprecher-1-4-und-lr) beschrieben eingerichtet werden. Weitere Informationen zum TC5 findet man [hier](https://www.rtw.com/de/produkte-gelistet/audio-monitore/touchcontrol-5.html) und zum Lautsprecher-Setup [hier](#lautsprecher-setup).
+Der RTW TouchControl 5 (TC5) steuert die Lautstärke, das Monitoring und das Bassmanagement für alle Lautsprecher im DOME (20.1). Um die Lautstärke der Lautsprecher 1-4 an alle anderen anzupassen, muss das MACKIE PULT (am Fenster) wie [hier](#mackie-mischpult-lautsprecher-1-4-und-lr) beschrieben eingerichtet werden.
+
+
+Mit dem Drehknopf des Controlers wird die Lautstärke eingestellt. Um alle Signale zu muten kann der Knopf gedrückt werden. Um die Referenz-Lautstärke auszuwählen kann der der Referece-Button (unten) gedrückt werden. Zwischen der Monitoring- und der Metering-Ansicht kann oben rechts umgeschalten werden. Unter Phones ist ein Stereo-Downmix über den Kopfhörerausgang verfügbar, welcher alle Lautsprecher mutet.
+
+**Presets:**
+
+Presets können über den 'Preset' Button ganz unten ganz rechts umgestellt werden:
+
+![Screenshot RTW Presets](/images/rtw_presets.bmp)
+
+**Metering:**
+
+In der Metering-Ansicht können die Eingänge (1-21) auf den entsprechenden Kanälen in den RTW untersucht werden. Wie diese Eingänge auf die Lautsprecher geroutet werden, regelt das jeweilige Preset.
+
+![Screenshot RTW Metering](/images/rtw_metering.bmp)
+
+**Monitoring:**
+
+Die Monitoring-Ansicht zeigt alle im Preset verwendeten Lautsprecher an. Die Positionen der Lautsprecher auf dem Bild entsprechen nicht unbedingt den Positionen im Raum! In dieser Ansicht kann jeder Lautsprecher ausgewählt werden. Je nach Modus (oben rechts: Solo / Cut / Phase) wird der ausgewählte Lautsprecher isoliert, gemutet oder seine Phase getauscht. Die folgenden Bilder zeigen einmal die Monitoring-Ansicht für das 7.1.4 Preset und das 20.1 Preset, bei welchem ein Lautsprecher isoliert ist:
+
+![Screenshot RTW 7.1.4 Monitoring](/images/rtw_monitoring_7_1_4.bmp)
+![Screenshot RTW 20.1 Monitoring Solo](/images/rtw_solo.bmp)
+
+Sollten Probleme auftreten kann der Controler und Presets -> Settings -> Restart neu gestartet werden. Der Controler sollte niemals selbst neu kalibriert werden!
+
+Weitere Informationen zum TC5 findet man [hier](https://www.rtw.com/de/produkte-gelistet/audio-monitore/touchcontrol-5.html) und zum Lautsprecher-Setup [hier](#lautsprecher-setup).
+
 
 # Routings für die meisten Anwendungsfälle
 
